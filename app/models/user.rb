@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook]
   
+  has_many :todo_lists
  # before_action :authenticate_user!
  def self.new_with_session(params, session)
   super.tap do |user|

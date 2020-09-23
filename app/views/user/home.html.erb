@@ -1,6 +1,6 @@
 <% if current_user && (current_user || current_user == @todo_lists.user)%>
-<li>
-  <%= link_to "New Todo List", new_todo_list_path %>      
+<li>      
+  <%= link_to "Todo List", todo_lists_path %>      
   </li>
 <% else %>
   <li>
